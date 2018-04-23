@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Demo Page</title>
+</head>
+
+<body ng-app="abcApp">
+	<hr />
+	<div class="container" ng-controller="ABCDataController">
+		<div class="row">
+			<table>
+				<tr>
+					<td><label>Travel Data Topic:</label></td>
+					<td><input type="text" ng-model="kafka.kTopic"
+						name="kafka.kTopic" class="input-sm spacing" value="testing"
+						text='testing' /></td>
+				</tr>
+				<tr>
+					<td><label>Number of Records: </label></td>
+					<td><input type="text" ng-model="kafka.nRec" name="kafka.nRec"
+						class="input-sm spacing" /></td>
+				</tr>
+			</table>
+		</div>
+
+		<p></p>
+
+		<div class="row">
+			<table>
+				<tr>
+					<td><button ng-click="greeting()" class="btn btn-sm btn-info">Greeting</button>&nbsp;&nbsp;
+					</td>
+					<td><button ng-click="createProducerData(kafka)"
+							class="btn btn-sm btn-info">CreateProducerData</button>&nbsp;&nbsp;</td>
+					<td><button ng-click="reset()" class="btn btn-sm btn-info">Reset</button>&nbsp;&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+
+		<hr />
+
+		<p></p>
+		<div class="row">
+			<p ng-bind="greet"></p>
+		</div>
+
+
+	</div>
+</body>
+
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/ABCDataController.js"></script>
+<script src="js/app/ABCDataService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+<link rel="stylesheet" href="css/app/app.css" />
+</html>
